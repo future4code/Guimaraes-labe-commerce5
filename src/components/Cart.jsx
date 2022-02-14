@@ -10,7 +10,7 @@ const Text = styled.h2`
     letter-spacing: 5px;
     color:#FFF;
     top:35%;
-    botton:35%;
+    bottom:35%;
     left:27%;
     right:27%;
     font-size: 50px;
@@ -24,7 +24,7 @@ export default function Cart() {
     return (
         <div>
             <ImgBG src="/assets/bg.jpg" alt="Background" />
-            <Text>Shop Pica das Galaxias</Text> 
+            <Text>Last Frontier Store</Text> 
         </div>
     )
 }

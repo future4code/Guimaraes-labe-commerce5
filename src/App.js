@@ -7,7 +7,6 @@ import Produtos from './components/Produtos';
 import Category from './components/Category';
 import Footer from './components/Footer';
 
-
 function App() {
   return (
     <div className="App">

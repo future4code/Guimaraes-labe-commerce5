@@ -19,7 +19,12 @@ const NavMenu = styled.nav`
         color: #fff;
         list-style: none;
         text-decoration: none;
-   
+    }
+
+    a:hover{
+        color: gray;
+        text-shadow: 0.5px 0.5px black;
+    }
 
 `
 
@@ -38,7 +43,7 @@ const Header = styled.header`
 export default function MenuNav() {
   return (
     <Header>
-        
+
         <NavMenu>
         <UlNav>
                 <li><a href="#">Inicio</a></li>
