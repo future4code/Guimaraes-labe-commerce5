@@ -18,12 +18,7 @@ const NavMenu = styled.nav`
     a{
         color: #fff;
         list-style: none;
-        text-decoration: none;
-    }
-
-    a:hover{
-        color: gray;
-        text-shadow: 0.5px 0.5px black;
+        text-decoration: none;  
     }
 
 `
@@ -40,10 +35,13 @@ const Header = styled.header`
         display:flex;
         justify-content: space-around;
 `
-export default function MenuNav() {
-  return (
-    <Header>
 
+
+export default class MenuNav extends React.Component {
+    render() {
+      return (
+        <Header>
+        
         <NavMenu>
         <UlNav>
                 <li><a href="#">Inicio</a></li>
@@ -54,11 +52,11 @@ export default function MenuNav() {
 
         <NavMenu>
             <UlNav>
-                <li><a href="#">Login</a></li>
                 <li><a href="#">Carrinho</a></li>
                 <li><a href="../Cart.jsx">Contatos</a></li>
             </UlNav>
         </NavMenu>
     </Header>
-  )
-}
+      );
+    }
+  }
