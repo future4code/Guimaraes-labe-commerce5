@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
+
 const NavMenu = styled.nav`
     display: flex;
     justify-content: space-around;
@@ -43,7 +44,7 @@ export default class MenuNav extends React.Component {
         <Header>
         
         <NavMenu>
-        <UlNav>
+            <UlNav>
                 <li><a href="#">Inicio</a></li>
                 <li><a href="#">Produtos</a></li>
                 
