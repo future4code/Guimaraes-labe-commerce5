@@ -19,9 +19,13 @@ const NavMenu = styled.nav`
     a{
         color: #fff;
         list-style: none;
-        text-decoration: none;  
-    }
+        text-decoration: none;
 
+        :hover{
+            color: gray;
+            text-shadow: 5px 5px 6px black;
+        }
+    }
 `
 
 const UlNav = styled.ul`
