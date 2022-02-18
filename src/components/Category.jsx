@@ -34,6 +34,7 @@ const BtnCenter = styled.div`
     text-align: center;
     border: 1px #080000 solid;
     border-radius: 5%;
+    border: 2px black solid;
     
 
     h3{
