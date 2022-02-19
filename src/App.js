@@ -1,23 +1,32 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import MenuNav from './components/MenuNav';
-import Cart from './components/Cart';
-import Produtos from './components/Produtos';
-import Category from './components/Category';
-import Footer from './components/Footer';
+import Home from './components/Home';
+import PageInicial from './components/PageInicial';
 
+export default class App extends React.Component {
+  state = {
+    login: false
+  };
 
-function App() {
-  return (
-    <div className="App">
-     <MenuNav />
-     <Cart />
-     <Produtos />
-     <Category />
-     <Footer />
-    </div>
-  );
+  logar = () => {
+    this.setState({ login: true });
+  };
+
+  logout = () => {
+    this.setState({ login: false });
+  };
+
+  render() {
+    let pagina = this.state.login ? (
+      <Home onClickLogout={this.logout} />
+    ) : (
+      <PageInicial onClickLogin={this.logar} />
+    );
+
+    return (
+      <div className="App">
+        {pagina}
+      </div>
+    );
+  }
 }
-
-export default App;

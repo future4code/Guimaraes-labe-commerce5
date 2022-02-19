@@ -10,33 +10,47 @@ const ContainerCategory = styled.div`
 `
 
 const Box = styled.div`
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
     width:33vw;
     height: 90vh;
 
     img{
+        padding: 5px;
         width:90%;
         height:70%;
     }
 
     h1{
         color:#fff;
-        margin-left:120px;
     }
 
 `
 const BtnCenter = styled.div`
     width:230px;
     background:#FFF;
-    margin-left:120px;
+    text-align: center;
+    border: 1px #080000 solid;
+    border-radius: 5%;
+    border: 2px black solid;
     
 
     h3{
         font-family: 'Arial Narrow', Arial, sans-serif;
         font-weight: 500;
-        letter-spacing: 4px;
+        letter-spacing: 4px; 
         padding:5px;
-        color:#000;
+        color:#080000;
+        transition: all 1 s;
+        cursor: pointer;
         
+    }
+
+    h3:hover{
+        transform: scale(1.1);
+        transition: all 1s;
     }
 `
 
