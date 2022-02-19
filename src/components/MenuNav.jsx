@@ -78,7 +78,7 @@ export default class MenuNav extends React.Component {
         
             <UlNav>
                 <li><a href="#">Carrinho</a></li>
-                <li><a href="../Cart.jsx">Login</a></li>
+                <li><a href="../Cart.jsx">Logout</a></li>
             </UlNav>
         </NavMenu>
     </Header>
