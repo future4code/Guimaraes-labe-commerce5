@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import Home from './components/Home';
-import Login from './components/Login';
+import PageInicial from './components/PageInicial';
 
 export default class App extends React.Component {
   state = {
@@ -20,7 +20,7 @@ export default class App extends React.Component {
     let pagina = this.state.login ? (
       <Home onClickLogout={this.logout} />
     ) : (
-      <Login onClickLogin={this.logar} />
+      <PageInicial onClickLogin={this.logar} />
     );
 
     return (

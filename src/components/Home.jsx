@@ -10,7 +10,6 @@ export default class Home extends React.Component {
     render() {
       return (
         <div className="Home">
-            <p onClick={this.props.onClickLogout}>Logout</p>     
             <MenuNav /> 
             <Cart />
             <Produtos />
