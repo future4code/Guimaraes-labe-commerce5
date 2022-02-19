@@ -1,132 +1,89 @@
 import React from 'react'
 import styled from 'styled-components'
+import Category from './Category';
+import Footer from './Footer';
 
-const TitleH1 = styled.h1`
-margin-top:90px;
-margin-bottom:45px;
-text-align: center;
-font-weight: 500;
-letter-spacing: 5px;
+import HomeP from "./HomeP/HomeP";
+import { ContainerGeral } from "./HomeP/Style";
+import MenuNav from './MenuNav';
 
 
-`
-
-const Card = styled.div`
-    max-width: 40%; 
-    text-align: center;
-    justify-content: space-around;
-
-`
-
-const ContainerProdutos = styled.div`
-    display:flex;
-    flex-direction: row;
-    justify-content: space-around;
-`
-const CardImg = styled.div`
+export class Produtos extends React.Component {
+    state = {
+        produtos: [
+          {
+            id: 1,
+            name: "Item A",
+            value: 50.0,
+            imageUrl: "https://picsum.photos/200/200?a=1",
+            favorito: false,
+          },
+          {
+            id: 2,
+            name: "Item B",
+            value: 20.0,
+            imageUrl: "https://picsum.photos/200/200?a=2",
+            favorito: false,
+          },
+          {
+            id: 3,
+            name: "Item C",
+            value: 150.0,
+            imageUrl: "https://picsum.photos/200/200?a=3",
+            favorito: false,
+          },
+          {
+            id: 4,
+            name: "Item D",
+            value: 349.0,
+            imageUrl: "https://picsum.photos/200/200?a=4",
+            favorito: false,
+          },
+          {
+            id: 5,
+            name: "Item E",
+            value: 23.55,
+            imageUrl: "https://picsum.photos/200/200?a=5",
+            favorito: false,
+          },
+          {
+            id: 6,
+            name: "Item F",
+            value: 123.0,
+            imageUrl: "https://picsum.photos/200/200?a=6",
+            favorito: false,
+          },
+          {
+            id: 7,
+            name: "Item G",
+            value: 27.0,
+            imageUrl: "https://picsum.photos/200/200?a=7",
+            favorito: false,
+          },
+          {
+            id: 8,
+            name: "Item H",
+            value: 950.0,
+            imageUrl: "https://picsum.photos/200/200?a=8",
+            favorito: false,
+          },
+        ],
+        ordenado: false,
+        contador: 1,
+        novaListaCarrinho: [],
     
-    background:#F7F7F7 ;
-    text-align: center;
-    height:450px;
-    width:400px;
-
-    img{
-        margin-top: 10px;
-        width:75%;
-        height:95%;
+        valorInputBusca: "",
+        valorInputMinimo: "",
+        valorInputMaximo: "",
+        checkboxFavoritos: false
+      };
+    
+    render() {
+      return (
+          <>
+            <HomeP />
+         
+          </>
+      )
     }
-`
-const TextoProdutos = styled.div`
-    font-family: Georgia, Times, 'Times New Roman', serif;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    margin: 5px;
-`
-
-const BtnCarrinho = styled.button`
-    padding: 3px;
-    background-color: whitesmoke;
-    box-shadow: 2px 2px #666;
-    border: 0.5px grey solid;
-    border-radius: 5%;
-    color: black;
-    cursor: pointer;
-
-    :hover{
-        background-color: #dadada;
-    }
-
-    :active{
-        background-color: #dadada;
-        transform: translateY(2px);
-    }
-`
-
-
-const BtnCenter = styled.div`
-    text-align: center;
-    border: 2px gray solid;
-    width:230px;
-    margin:auto;
-    background:#000;
-
-    h3{ 
-        font-family: 'Arial Narrow', Arial, sans-serif;
-        font-weight: 500;
-        letter-spacing: 4px; 
-        padding:5px;
-        color:#fff;
-        transition: all 1 s;
-        cursor: pointer;
-    }
-    h3:hover{
-        transform: scale(1.1);
-        transition: all 1s;
-    }
-`
-export default function Produtos() {
-  return (
-    <div>
-        <TitleH1> PRODUTOS EM DESTAQUE</TitleH1>
-        
-        <ContainerProdutos>
-            <Card >
-                <CardImg>
-                   <img src="/assets/sateliteSovietico.png" alt="Background"/>
-                </CardImg>
-
-                <TextoProdutos>
-                    <p>Antigo Satelite da União Soviética</p>
-                    <p>R$ 1,2 milhoes</p>
-                   
-                </TextoProdutos>
-                <BtnCarrinho>Adicionar ao carrinho</BtnCarrinho>
-                
-            </Card >
-
-              <Card >
-                <CardImg>
-                   <img src="/assets/onibus.jpg" alt="Background"/>
-                </CardImg>
-
-                <TextoProdutos>
-                    <p>Onibus espacial da NASA</p>
-                    <p>R$ 4,2 milhoes</p> 
-
-                </TextoProdutos>
-                <BtnCarrinho>Adicionar ao carrinho</BtnCarrinho>
-                
-            </Card > 
-
-               
-        </ContainerProdutos>
-
-        <BtnCenter>
-            <h3>Todos os Produtos</h3>
-        </BtnCenter>  
-        
-        
-    </div>
-  )
-}
+  }
