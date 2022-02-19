@@ -1,5 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
+import PageInicial from './PageInicial'
+import { PagProdutos } from './PagProdutos'
 
 const NavMenu = styled.nav`
     display: flex;
@@ -63,7 +65,28 @@ const IconeMenu = styled.img`
 
 
 export default class MenuNav extends React.Component {
+    state = {
+        produto: ""
+      };
+
+      irParaProduto = () => {
+        this.setState({ produto: "produtos" });
+        console.log('To rolando')
+      };
+
+   
     render() {
+
+        let secao;
+
+        switch (this.state.produto) {
+          case "produtos":
+            secao = <PageInicial />;
+            break;
+             default:
+            secao = <p>Nenhuma seção selecionada</p>;
+        }
+
       return (
         <Header>
         
@@ -73,12 +96,13 @@ export default class MenuNav extends React.Component {
             <UlNav>
                 <li><a href="#">Inicio</a></li>
                 <li><a href="#">Produtos</a></li>
+                <button onClick={this.irParaProduto}>produtos</button>
                 
             </UlNav>
         
             <UlNav>
                 <li><a href="#">Carrinho</a></li>
-                <li><a href="../Cart.jsx">Login</a></li>
+                <li><a href="../Cart.jsx">Logout</a></li>
             </UlNav>
         </NavMenu>
     </Header>
