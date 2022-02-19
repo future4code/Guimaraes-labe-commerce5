@@ -6,15 +6,12 @@ import Category from './Category';
 import Footer from './Footer';
 
 
+
 export default class Home extends React.Component {
     render() {
       return (
         <div className="Home">
-            <MenuNav /> 
-            <Cart />
-            <Produtos />
-            <Category />
-            <Footer />
+
         </div>
       
       );
