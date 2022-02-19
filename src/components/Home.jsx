@@ -4,7 +4,7 @@ import Cart from './Cart';
 import ProdutosDestaque from './ProdutosDestaque';
 import Category from './Category';
 import Footer from './Footer';
-
+import { Produtos } from './Produtos';
 
 
 export default class Home extends React.Component {

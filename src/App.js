@@ -3,7 +3,9 @@ import './App.css';
 import Home from './components/Home';
 import PageInicial from './components/PageInicial';
 
+
 export default class App extends React.Component {
+  
   state = {
     login: false
   };

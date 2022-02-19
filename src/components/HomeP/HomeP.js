@@ -139,7 +139,7 @@ class Home extends React.Component {
     });
     this.setState({ novaListaCarrinho: listaItensCarrinho });
   };
-  //marcar coo favorito
+  //marcar como favorito
   onClickFavorito = (id) => {
     const arrayFavorito = this.state.produtos;
     console.log(arrayFavorito);
@@ -147,7 +147,7 @@ class Home extends React.Component {
     arrayFavorito[recebeIndex].favorito = !arrayFavorito[recebeIndex].favorito;
     this.setState({ produtos: arrayFavorito });
   };
-  //local storge  e ciclo de vida
+  //local storage  e ciclo de vida
 
   componentDidUpdate = () => {
     const novoCarrinho = this.state.novaListaCarrinho;
@@ -241,7 +241,7 @@ class Home extends React.Component {
         <div>
           <p>
             {item.quantidade}x {item.name} -{" "}
-            <IconeX onClick={() => this.apagarItemCarrinho(item.id)}>X</IconeX>
+            <IconeX onClick={() => this.apagarItemCarrinho(item.id)}>Remove</IconeX>
             {/*NOVO*/}
           </p>
         </div>

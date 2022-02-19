@@ -3,81 +3,87 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   padding: 0;
-  background-color: white;
+  margin: 0;
+  background-color: gray;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   color: black;
-  height: 600px;
 `;
 export const ContainerGeral = styled.div`
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
-  width: 100vw;
+  align-items: center;
   height: 100vh;
+  background-color: gray;
 `;
 
 export const ContainerFiltro = styled.div`
   display: flex;
   flex-direction: column;
-  background-color: white;
-  width: 300px;
+  background-image: linear-gradient(to top,dimgray,purple);
+  box-shadow: 2px 2px 3px black  ;
+  width: 200px;
   height: 80vh;
   padding: 10px;
-  margin: 10px;
+  margin: 5px;
   border: 1px solid black;
 `;
 
 export const CrescenteDecrescente = styled.div`
   display: flex;
   flex-direction: row-reverse;
-  background-color: white;
   width: 50vw;
-  height: 80px;
+  height: 70px;
   justify-content: space-around;
   align-items: center;
   margin: auto;
 `;
 
 export const ContainerCard = styled.div`
-  display: flex;
-  /*flex-direction: row;*/
-  flex-wrap: wrap;
-
-  background-color: white;
-
-  justify-content: space-between;
+  display: grid;
+  grid-template: repeat(4, 1fr) / repeat(4, 1fr);
   align-items: center;
-  height: 900px;
+  height: 105vh;
 `;
 export const Card = styled.div`
   flex-direction: column;
-  border: 1px solid orange;
+  border: 2px solid purple;
+  background-image: linear-gradient(to top,purple,black);
+  box-shadow: 2px 2px 3px black  ;
+
   display: flex;
-  flex-wrap: wrap;
+  // flex-wrap: wrap;
   align-items: center;
-  height: 400px;
-  width: 250px;
+  height: 300px;
+  width: 200px;
   margin: 2px;
+  padding: 2px;
 `;
 export const Button = styled.div`
-  background-color: black;
-  color: white;
-  height: 50px;
-  width: 10vw;
-  text-align: center;
-  font-size: small;
-  flex-wrap: wrap;
-  :hover {
-    /*NOVO*/
-    background-color: rgb(0, 0, 0, 0.5);
-  }
+
+  padding: 3px;
+    background-color: whitesmoke;
+    box-shadow: 2px 2px #666;
+    border: 0.5px grey solid;
+    border-radius: 5%;
+    color: black;
+    cursor: pointer;
+
+    :hover{
+        background-color: #dadada;
+    }
+
+    :active{
+        background-color: #dadada;
+        transform: translateY(2px);
+    }
 `;
 
 export const ContainerCarrinho = styled.div`
   flex-direction: column;
-  background-color: white;
-  width: 400px;
+  background-image: linear-gradient(to bottom,dimgray,purple);
+  box-shadow: 2px 2px 3px black  ;
+  width: 300px;
   height: 95vh;
   padding: 10px;
   margin: 10px;
@@ -87,7 +93,8 @@ export const ContainerCarrinho = styled.div`
 
 export const IconeX = styled.strong`
   :hover {
-    color: orange;
+    cursor: pointer;
+    color: purple;
   }
 `;
 
