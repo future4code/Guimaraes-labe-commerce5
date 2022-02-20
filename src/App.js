@@ -1,8 +1,6 @@
-import React from 'react';
-import './App.css';
-import Home from './components/paginas/Home';
-import PageInicial from './components/paginas/PageInicial';
-import Routers from './components/Routers';
+import React from "react";
+import Home  from "./Components/home";
+import Login  from "./Components/login";
 
 
 export default class App extends React.Component {
@@ -22,16 +20,13 @@ export default class App extends React.Component {
     let pagina = this.state.login ? (
       <Home onClickLogout={this.logout} />
     ) : (
-      <PageInicial onClickLogin={this.logar} />
+      <Login onClickLogin={this.logar} />
     );
 
     return (
-     
       <div className="App">
         {pagina}
-        
       </div>
-      
     );
   }
 }
