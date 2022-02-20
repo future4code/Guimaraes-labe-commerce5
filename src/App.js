@@ -1,7 +1,9 @@
 import React from 'react';
 import './App.css';
-import Home from './components/Home';
-import PageInicial from './components/PageInicial';
+import Home from './components/paginas/Home';
+import PageInicial from './components/paginas/PageInicial';
+import Routers from './components/Routers';
+
 
 export default class App extends React.Component {
   state = {
@@ -24,9 +26,12 @@ export default class App extends React.Component {
     );
 
     return (
+     
       <div className="App">
         {pagina}
+        
       </div>
+      
     );
   }
 }

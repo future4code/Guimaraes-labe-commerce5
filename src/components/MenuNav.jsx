@@ -1,7 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
-import PageInicial from './PageInicial'
-import { PagProdutos } from './PagProdutos'
+import PageInicial from './paginas/PageInicial'
+import { Link } from 'react-router-dom'
+
+
 
 const NavMenu = styled.nav`
     display: flex;
@@ -94,9 +96,11 @@ export default class MenuNav extends React.Component {
         
         <NavMenu>            
             <UlNav>
+               
+                
                 <li><a href="#">Inicio</a></li>
-                <li><a href="#">Produtos</a></li>
-                <button onClick={this.irParaProduto}>produtos</button>
+                <li><Link to='/page1'>Produtos</Link></li>
+                
                 
             </UlNav>
         

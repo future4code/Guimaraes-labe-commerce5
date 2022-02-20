@@ -36,8 +36,6 @@ to { opacity: 1; } /* Firefox */
 }
 `
 
-
-
 export default class PageInicial extends React.Component {
   render() {
     return (
