@@ -1,11 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
-import Category from './Category';
-import Footer from './Footer';
-
-import HomeP from "./HomeP/HomeP";
-import { ContainerGeral } from "./HomeP/Style";
-import MenuNav from './MenuNav';
+import Category from '../Category';
+import Footer from '../Footer';
+import HomeP from "../HomeP/HomeP";
+import { ContainerGeral } from "../HomeP/Style";
+import MenuNav from '../MenuNav';
+import { Switch, Route} from 'react-router-dom';
 
 
 export class Produtos extends React.Component {
@@ -82,8 +82,10 @@ export class Produtos extends React.Component {
       return (
           <>
             <HomeP />
-         
+           
+           
+
           </>
-      )
+      );
     }
   }
