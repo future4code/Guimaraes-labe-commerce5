@@ -5,8 +5,8 @@ import styled from "styled-components"
 
 const Container = styled.div`
   padding: 0;
-  background-color: white;
     color: black;
+    background-color: #040f16;
 `;
 
 /*STYLED COMPONENTS HEADER */
@@ -54,6 +54,27 @@ const Header = styled.header`
 const IconeMenu = styled.img`
         width:65px;
 `
+const Cart = styled.div`
+display: block;
+justify-content: center;
+align-items: center;
+`
+const Text = styled.h2`
+    position:absolute;
+    text-align: center;
+    font-family: 'Arial Narrow', Arial, sans-serif;
+    letter-spacing: 5px;
+    color: black;
+    top:35%;
+    bottom:35%;
+    left:27%;
+    right:27%;
+    font-size: 50px;
+`
+const ImgBG = styled.img`
+    width:98.7vw;
+    height: 70vh;
+`
 
 /*STYLED COMPONENTS MAIN */
 
@@ -62,7 +83,9 @@ const ContainerGeral = styled.div`
   flex-direction: row;
   align-items: flex-start;
   width: 95vw;
-  height: 80vh;
+  height: auto;
+
+
 `;
 
 const ContainerFiltro = styled.div`
@@ -74,6 +97,10 @@ const ContainerFiltro = styled.div`
   padding: 10px;
   margin: 10px;
   border: 1px solid black;
+  background-color: gray;
+  box-shadow: inset 0 0 1em white, 0 0 1em wheat;
+
+
 `;
 
 const ContainerCard = styled.div`
@@ -82,7 +109,9 @@ const ContainerCard = styled.div`
   background-color: white;
   justify-content: space-between;
   align-items: center;
-  height: 56.25rem;
+  height: auto;
+  background-color: black;
+  
 `;
 const Card = styled.div`
   flex-direction: column;
@@ -93,20 +122,27 @@ const Card = styled.div`
   height: auto;
   width: 15.625rem;
   margin: 7px;
+  box-shadow: inset 0 0 1em white, 0 0 1em wheat;
+  color: white;
+  :hover {
+    color: crimson;
+  }
 `;
 const Button = styled.div`
-  background-color: black;
+  display: flex;
   color: white;
   height: 1.725rem;
-  width: 10 vw;
+  width: 12vw;
   text-align: center;
   font-size: small;
   flex-wrap: wrap;
-  display: flex;
   align-items: center;
   justify-content: center;
+  
   :hover {
-    background-color: rgb(0, 0, 0, 0.5);
+    color: crimson;
+    box-shadow: inset 0 0 1em white, 0 0 1em wheat;
+
   }
 `;
 
@@ -118,6 +154,9 @@ const ContainerCarrinho = styled.div`
   padding: 10px;
   margin: 10px -35px 0 20px;
   border: 1px solid black;
+  background-color: gray;
+  box-shadow: inset 0 0 1em white, 0 0 1em wheat;
+
 `;
 
 
@@ -375,7 +414,12 @@ class Home extends React.Component {
                 <li><a >Logout</a></li>
             </UlNav>
           </NavMenu>
+          
         </Header>
+        <Cart>
+            <ImgBG src="https://st2.depositphotos.com/2197700/9865/i/600/depositphotos_98657884-stock-photo-space-shuttle-orbiting-earth.jpg" alt="Background" />
+            <Text>Last Frontier</Text> 
+        </Cart>
 
         <ContainerGeral>
           <ContainerFiltro>
