@@ -70,13 +70,6 @@ const Text = styled.h2`
     left:27%;
     right:27%;
     font-size: 50px;
-
-    :hover{
-      color: crimson;
-      transform: rotateX(360deg);
-                transform: rotateY(360deg);
-                transition: all 4s;
-    }
 `
 const ImgBG = styled.img`
     width:98.7vw;
@@ -405,11 +398,12 @@ class Home extends React.Component {
     // CONST PARA INDICAR A QUANTIDADE DE PRODUTOS
     const numeroDeProdutos = listaDoEstado.length;
 
+    // ============================================================
     return (
       <Container>
         
         <Header>        
-         
+          <IconeMenu src="/assets/IconeNave.png"/>    
           <NavMenu>            
             <UlNav>                     
                 <li><a href="#">Inicio</a></li>           
@@ -417,10 +411,10 @@ class Home extends React.Component {
     
             <UlNav>
                 <li><a >Carrinho</a></li>
-                <li><a onClick={this.props.onClickLogout} >Logout</a></li>
+                <li><a >Logout</a></li>
             </UlNav>
           </NavMenu>
-          <IconeMenu onClick={this.props.onClickLogout} src="/assets/IconeNave.png"/>
+          
         </Header>
         <Cart>
             <ImgBG src="https://st2.depositphotos.com/2197700/9865/i/600/depositphotos_98657884-stock-photo-space-shuttle-orbiting-earth.jpg" alt="Background" />
@@ -457,9 +451,11 @@ class Home extends React.Component {
               <p>Total de itens na loja: {numeroDeProdutos}</p>
             </div>
           </ContainerFiltro>
+
           {/*cards*/}
           <ContainerCard>{listaRenderizada}</ContainerCard>
           {/*crescente decrescente*/}
+
           {/*carrinho*/}
           <ContainerCarrinho>
             <h1>Carrinho:</h1>
@@ -468,9 +464,12 @@ class Home extends React.Component {
             {}
             {/*TOTAL SOMA DOS PRODUTOS NO CARRINHO*/}
             <p>R${soma}</p>
-          </ContainerCarrinho>                    
+          </ContainerCarrinho>
+                    
         </ContainerGeral>
-      </Container>     
+
+      </Container>
+      
       
     );
   }
