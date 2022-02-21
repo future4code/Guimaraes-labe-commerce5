@@ -23,3 +23,5 @@ O projeto foi desenvolvido usando as seguintes tecnologias:
 
 Um Projeto muito desafiador, pensamos que não conseguiriamos, mas vencemos!!
 “Lembre-se: seu foco determina a sua realidade.” -ui-Gon Jinn (Star Wars: Episódio I – A Ameaça Fantasma)
+
+Link Surge: blue-account.surge.sh
