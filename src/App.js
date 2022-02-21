@@ -1,6 +1,6 @@
 import React from "react";
-import Home  from "./Components/home";
-import Login  from "./Components/login";
+import Home  from "./components/home";
+import Login  from "./components/login";
 
 
 export default class App extends React.Component {
